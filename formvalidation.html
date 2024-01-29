@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function meineFunktion() // mit action="" wird es auf eine bestimmte Seite Weitergeleitet
+        // wo ich eigegeben habe!
+        {
+            let name = document.getElementById('name');
+            console.log('Hello');
+    
+        }
+    </script>
+</head>
+
+<body>
+<!-- minlenght bedeutet minimal z.B. 4 Buchstaben
+    bei der Nummer genügt min zu schreiben und die Zahl wieviel Zahlen e minimum haben soll!!-->
+
+    <!-- return false; immer anwenden wenn es ein Formular werden soll -->
+    
+    <form onsubmit="meineFunktion(); return false;"> 
+        <input id="name" required minlength="4" type="text" placeholder="Bitte Namen eingeben">
+        <input id="email" required type="email" placeholder="Bitte E-mail eingeben">
+        <input id="myNumber" required type="number" min="10" placeholder="Bitte Zahl eingeben">
+        <button>Absenden</button>
+    </form>
+</body>
+
+</html>
